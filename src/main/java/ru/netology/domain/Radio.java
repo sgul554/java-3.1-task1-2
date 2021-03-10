@@ -9,7 +9,7 @@ public class Radio {
     private int currentVolume = 7;
 
     public int countControlStat(int controlStat) {
-        if (controlStat <= 9 & controlStat > 0) {
+        if (controlStat <= 9 && controlStat >= 0) {
             currentStation = controlStat;
         }
         return currentStation;

@@ -15,7 +15,7 @@ class RadioTest {
     @Test
     public void shouldControlStationUnderLimit() {
         Radio radio = new Radio();
-        assertEquals(5, radio.countControlStat(10));
+        assertEquals(5, radio.countControlStat(98));
     }
 
     @Test
@@ -25,9 +25,15 @@ class RadioTest {
     }
 
     @Test
+    public void shouldControlStationAboveLimit() {
+        Radio radio = new Radio();
+        assertEquals(5, radio.countControlStat(-1));
+    }
+
+    @Test
     public void shouldControlStationOnMinLimit() {
         Radio radio = new Radio();
-        assertEquals(5, radio.countControlStat(0));
+        assertEquals(0, radio.countControlStat(0));
     }
 
     @Test
