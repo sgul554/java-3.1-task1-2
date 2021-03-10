@@ -27,7 +27,7 @@ class RadioTest {
     @Test
     public void shouldControlStationOnMinLimit() {
         Radio radio = new Radio();
-        assertEquals(0, radio.countControlStat(0));
+        assertEquals(5, radio.countControlStat(0));
     }
 
     @Test
